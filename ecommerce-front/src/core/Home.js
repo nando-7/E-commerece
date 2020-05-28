@@ -4,6 +4,7 @@ import { getProducts } from './apiCore';
 import Card from './Card';
 import Search from './Search';
 import backImg from '../ecommerce.jpg'
+//import Menu from './Menu';
 
 
 const Home = () => {
@@ -40,35 +41,43 @@ const Home = () => {
     const divStyle = {
         backgroundImage: "url("+backImg+")",
         height: "85vh",
-        //paddingTop: "0",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         marginTop:"-50px",
+        //marginTop:"-70px",
+        //backgroundAttachment: "fixed",
         position:"relative"
-         //backgroundAttachment: "fixed",
-        //width: "100%",  opacity: "1", visibility: "inherit", zIndex: "20"
+        
         
     }
 
     const imgStyle = {
             fontSize:"25px",
             textAlign: "center",
-            color: "white",
-            paddingTop: "400px"
-            
-     
+            color: "#3d85d8",
+
+            // paddingTop: "400px",
+            // marginLeft: "50%",
+
+            position: "absolute",
+            top: "57%",
+            left: "45%",
+         
     }
     
-
+    //style={imgStyle}
         
     const pageFill = () => (
         <div className="img-fluid" style={divStyle}>
-        <div  style={imgStyle} >
+        
+       
+        <div  className="imgStyle">
             <p style={{textDecoration: "underline"}}>Scroll down</p>
             <i className="fas fa-angle-double-down"></i>
-            
         </div>
+        
+       
         </div>          
          )     
         
@@ -76,7 +85,8 @@ const Home = () => {
 
     return (
         
-    <div>
+    <div >
+        
         <Layout
             
             title="E-commerce"
@@ -84,10 +94,11 @@ const Home = () => {
             
            
         >
-           {pageFill()} 
+            
         </Layout>
-    
-          
+
+        {pageFill()}
+
         <Search />
             
          <div className="container-fluid">  

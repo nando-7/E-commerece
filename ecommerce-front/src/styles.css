@@ -1,5 +1,5 @@
 
-html {
+html { 
     height: 100%;
 }
 
@@ -24,6 +24,21 @@ body {
     text-decoration: underline;
 }
 
+.imgStyle{      
+    font-size:25px;
+    text-align:center;
+    color: white;
+    position: absolute;
+    top: 60%;
+    left:45%
+        
+        }    
+@media screen and (max-width: 600px) {
+        .imgStyle {
+            top: 57%;
+            left:37%
+            }
+          }       
 
 /**
  * border radius
