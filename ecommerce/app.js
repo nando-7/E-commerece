@@ -29,7 +29,7 @@ mongoose.connect(process.env.DATABASE, {
 .then(() => console.log("DB Connected"));
 
 
-
+//MIDDLEWARE ROUTES ALWAYS BEFORE ROUTES MIDDLEWARES
 
 //middlewares
 app.use(morgan('dev'))
