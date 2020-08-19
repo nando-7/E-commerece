@@ -14,6 +14,7 @@ const Product = props => {
             if (data.error) {
                 setError(data.error);
             } else {
+                console.log("hey")
                 setProduct(data);
                 // fetch related products
                 listRelated(data._id).then(data => {
