@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import ShowImage from './ShowImage';
 import moment from 'moment';
@@ -23,6 +23,10 @@ const Card = ({
   const [redirectin, setRedirectin] = useState(false);
   const [count, setCount] = useState(product.count);
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
+
   const showViewButton = showViewProductButton => {
     return (
       showViewProductButton && (
@@ -40,8 +44,6 @@ const Card = ({
     //console.log("hey")
   
   };
-
-  
 
   const shouldRedirect = redirect => {
     if (redirect) {
@@ -76,7 +78,6 @@ const Card = ({
       <ShowImage item={product} url="product" />
     )
   }
-
 
   const showStock = quantity => {
     return quantity > 0 ? (
